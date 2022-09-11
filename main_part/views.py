@@ -1,6 +1,6 @@
 import random
-
-from django.shortcuts import render
+from django.views.generic.detail import DetailView
+from django.shortcuts import render, get_object_or_404
 from .models import *
 
 
@@ -13,5 +13,8 @@ def doctor_page(request):
     return render(request, 'main_part/doctor_page.html', context={'patient': patients})
 
 
-def patient_page(request):
-    pass
+def detail_view(request, id):
+    measurement = Measurements.objects.get(id=id)
+    patients = Measurements.objects.all().order_by('hemoglobin')
+    return render(request, 'main_part/detail_view.html', context={'measure': measurement, 'patient': patients})
+

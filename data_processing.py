@@ -38,7 +38,7 @@ def get_hb_val(spectra_path, light_path, dark_path, hb_path): # absolute path to
 
 """
 Usage:
-oxy_hem, desoxy_hem = get_hb_val(spectra_path, light_path, dark_path, hb_path, )
+oxygen, sun_hem = get_hb_val(spectra_path, light_path, dark_path, hb_path, )
 Another example:
 print(get_hb_val(spectra_path='/home/atemiy/optic/occlusion/finger_occlusion_kazim_1_OceanOptics-MAYP11400_reflected_18_34_29_772.csv',
                  light_path='/home/atemiy/optic/occlusion/finger_occlusion_dinislam_repeat1_OceanOptics-MAYP11400_light_18_21_29_048.csv',
